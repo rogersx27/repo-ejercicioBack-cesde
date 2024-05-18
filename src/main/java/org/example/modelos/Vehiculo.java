@@ -8,7 +8,7 @@ public class Vehiculo {
     Integer id;
 
     //marca
-    String marca;
+    protected String marca;
 
     //modelo
     LocalDate modelo;
