@@ -5,34 +5,34 @@ import java.time.LocalDate;
 public class Vehiculo {
 
     //id
-    private Integer id;
+    private Integer id; //solo numeros positivos
 
     //marca
-    private String marca;
+    private String marca; //solo letras y espacios y maximo 50 caracteres sin caracteres especiales
 
     //modelo
-    private LocalDate modelo;
+    private LocalDate modelo; //CON EL PROFE
 
     //kilometraje
-    private Double kilometraje;
+    private Double kilometraje; //solo positivos y maximo 100.000
 
     //color
-    private String color;
+    private String color; //solo letras y espacios y maximo 20 caracteres
 
     //descripcion
-    private String descripcion;
+    private String descripcion; //maximo 100 caracteres
 
     //tipo
-    private String tipo;
+    private String tipo; //solo letras SIN ESPACIOS
 
     //autonomia
-    private Integer autonomia;
+    private Integer autonomia; //solo numeros positivos maximo 72
 
     //capacidadCarga
-    private Double capacidadCarga;
+    private Double capacidadCarga; // solo numeros positivos y maximo 1000
 
     //avaluo
-    private Integer avaluo;
+    private Integer avaluo; //solo positivos
 
     //CONSTRUCTORES DE LA CLASE
 
@@ -114,13 +114,7 @@ public class Vehiculo {
     }
 
     public void setAutonomia(Integer autonomia) {
-
-        if(autonomia<0){
-            System.out.println("error en la autonomia ingresada");
-        }else{
-            this.autonomia = autonomia;
-        }
-
+        this.autonomia = autonomia;
     }
 
     public Double getCapacidadCarga() {

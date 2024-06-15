@@ -3,6 +3,7 @@ package org.example;
 import org.example.modelos.Vehiculo;
 
 import java.time.LocalDate;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -10,15 +11,11 @@ public class Main {
 
         Vehiculo vehiculo = new Vehiculo();
 
+        Scanner lea = new Scanner(System.in);
+        System.out.print("Digite la autonomia: ");
+        vehiculo.setAutonomia(lea.nextInt());
 
 
-        //llamemos a pipe (SET)
-        vehiculo.setMarca("mazda");
-        vehiculo.setAutonomia(-300);
-
-
-        System.out.println("el nombre del vehiculo 1: "+vehiculo.getMarca());
-        System.out.println("la autonomia es: "+vehiculo.getAutonomia());
 
     }
 }
