@@ -1,8 +1,13 @@
 package org.example.modelos;
 
+import org.example.helpers.validaciones.VehiculoValidacion;
+
 import java.time.LocalDate;
 
 public class Vehiculo {
+
+    //INYECTANDO UNA DEPENDENCIA DE LA CLASE VehiculoValidacion
+    private VehiculoValidacion vehiculoValidacion=new VehiculoValidacion();
 
     //id
     private Integer id; //solo numeros positivos
@@ -66,7 +71,12 @@ public class Vehiculo {
     }
 
     public void setMarca(String marca) {
-        this.marca = marca;
+        try{
+            this.vehiculoValidacion.validarMarca(marca);
+            System.out.println("todo bien agonia");
+        }catch(Exception error){
+            System.out.println(error.getMessage());
+        }
     }
 
     public LocalDate getModelo() {
