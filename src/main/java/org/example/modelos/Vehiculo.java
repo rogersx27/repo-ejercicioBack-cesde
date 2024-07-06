@@ -16,7 +16,7 @@ public class Vehiculo {
     private String marca; //solo letras y espacios y maximo 50 caracteres sin caracteres especiales
 
     //modelo
-    private LocalDate modelo; //CON EL PROFE
+    private LocalDate modelo; //CON EL PROFE (MM-yy)
 
     //kilometraje
     private Double kilometraje; //solo positivos y maximo 100.000
