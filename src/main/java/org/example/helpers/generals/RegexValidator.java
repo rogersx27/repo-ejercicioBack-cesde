@@ -5,17 +5,15 @@ import java.util.regex.Pattern;
 
 public class RegexValidator {
 
-    public boolean validarRegex(String cadena, String regex){
+    public boolean validateRegex(String input, String regex){
 
-        Pattern patron=Pattern.compile(regex);
-        Matcher coincidencia=patron.matcher(cadena);
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(input);
 
-        if(!coincidencia.matches()){
-            //NO hubo coincidencia
+        if (!matcher.matches()) {
             return false;
-        }else{
+        } else {
             return true;
         }
-
     }
 }
